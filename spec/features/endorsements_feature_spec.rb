@@ -8,9 +8,9 @@ feature 'endorsing reviews' do
     review_restaurant('Ledbury',5)
   end
 
-  scenario 'a user can endorese a review, which updates the review endorsement count' do
+  scenario 'a user can endorese a review, which updates the review endorsement count', js: true do
     visit '/restaurants'
-    click_link 'Endorse Review'
+    click_link 'Endorse'
     expect(page).to have_content('1 endorsement')
   end
 
